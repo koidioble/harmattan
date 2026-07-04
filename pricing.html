@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harmattan — Cloud infrastructure, priced simply</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="haze" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="brand">
+        <span class="brand__mark">◐</span>
+        <span class="brand__name">Harmattan</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html"><span lang="en">Home</span><span lang="fr">Accueil</span><span lang="es">Inicio</span></a>
+        <a href="formation.html"><span lang="en">Formation</span><span lang="fr">Formation</span><span lang="es">Formación</span></a>
+        <a href="impact.html"><span lang="en">Impact</span><span lang="fr">Impact</span><span lang="es">Impacto</span></a>
+        <a href="regions.html"><span lang="en">Regions</span><span lang="fr">Régions</span><span lang="es">Regiones</span></a>
+        <a href="pricing.html" aria-current="page"><span lang="en">UI Patterns</span><span lang="fr">Motifs UI</span><span lang="es">Patrones UI</span></a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <label for="lang-en" class="lang-switch__label">EN</label>
+        <label for="lang-fr" class="lang-switch__label">FR</label>
+        <label for="lang-es" class="lang-switch__label">ES</label>
+      </div>
+      <label for="theme-switch" class="switch switch--theme" aria-label="Toggle light and dark theme">
+        <span class="switch__track switch__track--theme"><span class="switch__thumb"></span></span>
+      </label>
+    </div>
+  </header>
+
+  <p class="playground-note">
+    <span lang="en">This page is the <strong>CSS-only interactivity playground</strong> for the Harmattan project — a fictional pricing demo used to show what's possible with pure CSS: the toggle below, the "Sign in" modal, and the theme switch all run with <strong>zero JavaScript</strong>. For the real content about the Harmattan wind itself, see <a href="formation.html">how it forms</a> or <a href="impact.html">its effects</a>.</span>
+    <span lang="fr">Cette page est le <strong>terrain de jeu d'interactivité CSS pur</strong> du projet Harmattan — une fausse page de tarification utilisée pour montrer ce que le CSS seul permet de faire : le bouton ci-dessous, la fenêtre « Connexion », et le sélecteur de thème fonctionnent tous avec <strong>zéro JavaScript</strong>. Pour le contenu réel sur le vent Harmattan, voir <a href="formation.html">comment il se forme</a> ou <a href="impact.html">ses effets</a>.</span>
+    <span lang="es">Esta página es el <strong>banco de pruebas de interactividad solo con CSS</strong> del proyecto Harmattan — una página de precios ficticia usada para mostrar lo que es posible con CSS puro: el interruptor de abajo, la ventana de "Iniciar sesión" y el cambio de tema funcionan todos con <strong>cero JavaScript</strong>. Para el contenido real sobre el viento Harmattan, ve <a href="formation.html">cómo se forma</a> o <a href="impact.html">sus efectos</a>.</span>
+  </p>
+
+  <!-- ============================
+       Controls that drive the rest of the page via CSS :has()
+       No JavaScript anywhere in this file.
+       ============================ -->
+  <div class="controls visually-hidden-group">
+    <input type="radio" name="lang" id="lang-en" checked>
+    <input type="radio" name="lang" id="lang-fr">
+    <input type="radio" name="lang" id="lang-es">
+    <input type="checkbox" id="theme-switch">
+  </div>
+
+  <div class="nav">
+    <div class="nav__brand">
+      <span class="nav__mark">◐</span>
+      <span class="nav__name">Harmattan Pricing (demo)</span>
+    </div>
+
+    <div class="nav__right">
+      <nav class="nav__links">
+        <a href="#pricing"><span lang="en">Pricing</span><span lang="fr">Tarifs</span><span lang="es">Precios</span></a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+
+      <a href="#signin" class="nav__cta">
+        <span lang="en">Sign in</span><span lang="fr">Connexion</span><span lang="es">Iniciar sesión</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- CSS-only modal: shown when the URL fragment matches this id. -->
+  <div class="modal" id="signin">
+    <a href="#" class="modal__scrim" aria-label="Close"></a>
+    <div class="modal__card" role="dialog" aria-labelledby="signin-title">
+      <a href="#" class="modal__close" aria-label="Close">✕</a>
+
+      <p class="modal__eyebrow">
+        <span lang="en">Demo notice</span><span lang="fr">Avis de démonstration</span><span lang="es">Aviso de demostración</span>
+      </p>
+      <h2 id="signin-title">
+        <span lang="en">This isn't a real product</span>
+        <span lang="fr">Ce n'est pas un vrai produit</span>
+        <span lang="es">Esto no es un producto real</span>
+      </h2>
+      <p class="modal__copy">
+        <span lang="en">Harmattan is a portfolio piece — there's no backend, no accounts, and nothing here is stored. This modal exists to show that sign-in flows, forms, and overlays can be built with plain HTML &amp; CSS, no JavaScript required.</span>
+        <span lang="fr">Harmattan est une pièce de portfolio — il n'y a pas de backend, pas de comptes, et rien n'est enregistré ici. Cette fenêtre existe pour montrer que les flux de connexion, les formulaires et les fenêtres modales peuvent être construits en HTML et CSS pur, sans JavaScript.</span>
+        <span lang="es">Harmattan es una pieza de portafolio: no hay backend, no hay cuentas, y nada se guarda aquí. Esta ventana existe para mostrar que los flujos de inicio de sesión, formularios y ventanas modales se pueden construir con HTML y CSS puro, sin JavaScript.</span>
+      </p>
+
+      <form class="modal__form" onsubmit="return false;">
+        <label class="modal__label" for="demo-email">
+          <span lang="en">Email</span><span lang="fr">E-mail</span><span lang="es">Correo electrónico</span>
+        </label>
+        <input class="modal__input" id="demo-email" type="email" placeholder="you@example.com" disabled>
+
+        <label class="modal__label" for="demo-pass">
+          <span lang="en">Password</span><span lang="fr">Mot de passe</span><span lang="es">Contraseña</span>
+        </label>
+        <input class="modal__input" id="demo-pass" type="password" placeholder="••••••••" disabled>
+
+        <button class="modal__submit" type="button" disabled>
+          <span lang="en">Continue (disabled — demo only)</span>
+          <span lang="fr">Continuer (désactivé — démo uniquement)</span>
+          <span lang="es">Continuar (deshabilitado, solo demo)</span>
+        </button>
+      </form>
+
+      <p class="modal__foot">
+        <span lang="en">Curious how the toggle above works too? Both use pure CSS — this one via <code>:target</code>, the pricing switch via <code>:has()</code>.</span>
+        <span lang="fr">Curieux de savoir comment fonctionne aussi le bouton ci-dessus ? Les deux utilisent du CSS pur — celui-ci via <code>:target</code>, le bouton de tarification via <code>:has()</code>.</span>
+        <span lang="es">¿Tienes curiosidad por saber cómo funciona también el interruptor de arriba? Ambos usan CSS puro: este mediante <code>:target</code>, el interruptor de precios mediante <code>:has()</code>.</span>
+      </p>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">
+        <span lang="en">Infrastructure pricing</span>
+        <span lang="fr">Tarification de l'infrastructure</span>
+        <span lang="es">Precios de infraestructura</span>
+      </p>
+      <h1>
+        <span lang="en">Compute that moves<br>with your season.</span>
+        <span lang="fr">Le calcul qui évolue<br>avec la saison.</span>
+        <span lang="es">Cómputo que se mueve<br>con tu temporada.</span>
+      </h1>
+      <p class="hero__sub">
+        <span lang="en">Harmattan scales the way the wind does — quietly, predictably, and only as hard as it needs to. Pick a plan below and deploy in minutes.</span>
+        <span lang="fr">Harmattan évolue comme le vent — discrètement, de façon prévisible, et seulement autant que nécessaire. Choisissez un forfait ci-dessous et déployez en quelques minutes.</span>
+        <span lang="es">Harmattan escala como el viento: en silencio, de forma predecible, y solo tanto como hace falta. Elige un plan abajo y despliega en minutos.</span>
+      </p>
+
+      <div class="toggle" id="pricing">
+        <span class="toggle__label toggle__label--month">
+          <span lang="en">Monthly</span><span lang="fr">Mensuel</span><span lang="es">Mensual</span>
+        </span>
+        <label class="switch">
+          <input type="checkbox" id="billing-toggle">
+          <span class="switch__track"><span class="switch__thumb"></span></span>
+        </label>
+        <span class="toggle__label toggle__label--year">
+          <span lang="en">Yearly</span><span lang="fr">Annuel</span><span lang="es">Anual</span>
+          <span class="toggle__save">
+            <span lang="en">save 20%</span><span lang="fr">économisez 20 %</span><span lang="es">ahorra 20 %</span>
+          </span>
+        </span>
+      </div>
+    </section>
+
+    <section class="plans">
+
+      <article class="plan">
+        <div class="plan__head">
+          <h2>Calm</h2>
+          <p class="plan__desc">
+            <span lang="en">For side projects finding their footing.</span>
+            <span lang="fr">Pour les projets personnels qui prennent leurs marques.</span>
+            <span lang="es">Para proyectos personales que están arrancando.</span>
+          </p>
+        </div>
+        <p class="plan__price">
+          <span class="price-month">$0</span>
+          <span class="price-year">$0</span>
+          <span class="plan__period">/mo</span>
+        </p>
+        <ul class="plan__features">
+          <li><span lang="en">1 deployed project</span><span lang="fr">1 projet déployé</span><span lang="es">1 proyecto desplegado</span></li>
+          <li><span lang="en">100k requests / month</span><span lang="fr">100k requêtes / mois</span><span lang="es">100k solicitudes / mes</span></li>
+          <li><span lang="en">Community support</span><span lang="fr">Support communautaire</span><span lang="es">Soporte comunitario</span></li>
+          <li><span lang="en">Shared compute</span><span lang="fr">Calcul partagé</span><span lang="es">Cómputo compartido</span></li>
+        </ul>
+        <a href="#" class="plan__cta plan__cta--ghost">
+          <span lang="en">Start free</span><span lang="fr">Commencer gratuitement</span><span lang="es">Empezar gratis</span>
+        </a>
+      </article>
+
+      <article class="plan plan--featured">
+        <p class="plan__badge">
+          <span lang="en">Most drift</span><span lang="fr">Le plus choisi</span><span lang="es">Más elegido</span>
+        </p>
+        <div class="plan__head">
+          <h2>Gust</h2>
+          <p class="plan__desc">
+            <span lang="en">For teams shipping something people rely on.</span>
+            <span lang="fr">Pour les équipes qui livrent quelque chose dont les gens dépendent.</span>
+            <span lang="es">Para equipos que lanzan algo de lo que la gente depende.</span>
+          </p>
+        </div>
+        <p class="plan__price">
+          <span class="price-month">$29</span>
+          <span class="price-year">$23</span>
+          <span class="plan__period">/mo</span>
+        </p>
+        <ul class="plan__features">
+          <li><span lang="en">10 deployed projects</span><span lang="fr">10 projets déployés</span><span lang="es">10 proyectos desplegados</span></li>
+          <li><span lang="en">5M requests / month</span><span lang="fr">5M requêtes / mois</span><span lang="es">5M solicitudes / mes</span></li>
+          <li><span lang="en">Priority support, 24h response</span><span lang="fr">Support prioritaire, réponse sous 24h</span><span lang="es">Soporte prioritario, respuesta en 24h</span></li>
+          <li><span lang="en">Dedicated compute pool</span><span lang="fr">Pool de calcul dédié</span><span lang="es">Grupo de cómputo dedicado</span></li>
+          <li><span lang="en">Custom domains &amp; SSL</span><span lang="fr">Domaines personnalisés et SSL</span><span lang="es">Dominios personalizados y SSL</span></li>
+        </ul>
+        <a href="#" class="plan__cta plan__cta--solid">
+          <span lang="en">Start 14-day trial</span><span lang="fr">Essai gratuit de 14 jours</span><span lang="es">Prueba gratuita de 14 días</span>
+        </a>
+      </article>
+
+      <article class="plan">
+        <div class="plan__head">
+          <h2>Storm</h2>
+          <p class="plan__desc">
+            <span lang="en">For platforms that can't afford to stall.</span>
+            <span lang="fr">Pour les plateformes qui ne peuvent pas se permettre de ralentir.</span>
+            <span lang="es">Para plataformas que no pueden permitirse fallar.</span>
+          </p>
+        </div>
+        <p class="plan__price">
+          <span class="price-month">$99</span>
+          <span class="price-year">$79</span>
+          <span class="plan__period">/mo</span>
+        </p>
+        <ul class="plan__features">
+          <li><span lang="en">Unlimited projects</span><span lang="fr">Projets illimités</span><span lang="es">Proyectos ilimitados</span></li>
+          <li><span lang="en">Unlimited requests</span><span lang="fr">Requêtes illimitées</span><span lang="es">Solicitudes ilimitadas</span></li>
+          <li><span lang="en">Dedicated engineer on call</span><span lang="fr">Ingénieur dédié disponible</span><span lang="es">Ingeniero dedicado de guardia</span></li>
+          <li><span lang="en">99.99% uptime SLA</span><span lang="fr">SLA de disponibilité 99,99 %</span><span lang="es">SLA de disponibilidad del 99,99 %</span></li>
+          <li><span lang="en">SSO &amp; audit logs</span><span lang="fr">SSO et journaux d'audit</span><span lang="es">SSO y registros de auditoría</span></li>
+        </ul>
+        <a href="#" class="plan__cta plan__cta--ghost">
+          <span lang="en">Talk to sales</span><span lang="fr">Contacter les ventes</span><span lang="es">Hablar con ventas</span>
+        </a>
+      </article>
+
+    </section>
+
+    <section class="faq" id="faq">
+      <h3>
+        <span lang="en">A few things worth knowing</span>
+        <span lang="fr">Quelques points utiles à savoir</span>
+        <span lang="es">Algunas cosas que vale la pena saber</span>
+      </h3>
+      <div class="faq__grid">
+        <div class="faq__item">
+          <h4>
+            <span lang="en">Can I change plans later?</span>
+            <span lang="fr">Puis-je changer de forfait plus tard ?</span>
+            <span lang="es">¿Puedo cambiar de plan más adelante?</span>
+          </h4>
+          <p>
+            <span lang="en">Yes — upgrade or downgrade at any time. Changes apply on your next billing cycle, no penalties.</span>
+            <span lang="fr">Oui — passez à un forfait supérieur ou inférieur à tout moment. Les changements s'appliquent au prochain cycle de facturation, sans pénalité.</span>
+            <span lang="es">Sí, puedes subir o bajar de plan en cualquier momento. Los cambios se aplican en tu próximo ciclo de facturación, sin penalizaciones.</span>
+          </p>
+        </div>
+        <div class="faq__item">
+          <h4>
+            <span lang="en">What happens if I go over my limit?</span>
+            <span lang="fr">Que se passe-t-il si je dépasse ma limite ?</span>
+            <span lang="es">¿Qué pasa si supero mi límite?</span>
+          </h4>
+          <p>
+            <span lang="en">We'll email you before anything is throttled. Calm and Gust plans soft-cap; Storm never does.</span>
+            <span lang="fr">Nous vous enverrons un e-mail avant toute limitation. Les forfaits Calm et Gust ont un plafond souple ; Storm n'en a jamais.</span>
+            <span lang="es">Te avisaremos por correo antes de limitar nada. Los planes Calm y Gust tienen un límite flexible; Storm nunca lo tiene.</span>
+          </p>
+        </div>
+        <div class="faq__item">
+          <h4>
+            <span lang="en">Is there a student or nonprofit rate?</span>
+            <span lang="fr">Existe-t-il un tarif étudiant ou association ?</span>
+            <span lang="es">¿Hay una tarifa para estudiantes u ONG?</span>
+          </h4>
+          <p>
+            <span lang="en">Yes, 50% off Gust for verified students, educators, and registered nonprofits.</span>
+            <span lang="fr">Oui, 50 % de réduction sur Gust pour les étudiants vérifiés, les enseignants et les associations enregistrées.</span>
+            <span lang="es">Sí, 50 % de descuento en Gust para estudiantes verificados, docentes y ONG registradas.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>
+      <span lang="en">Harmattan — a demo project by Koidio Y. Blé</span>
+      <span lang="fr">Harmattan — un projet de démonstration par Koidio Y. Blé</span>
+      <span lang="es">Harmattan — un proyecto de demostración por Koidio Y. Blé</span>
+    </span>
+    <span class="site-footer__dot">·</span>
+    <span>
+      <span lang="en">Built with HTML &amp; CSS only, no framework, no JS logic</span>
+      <span lang="fr">Construit uniquement avec HTML et CSS, sans framework, sans logique JS</span>
+      <span lang="es">Construido solo con HTML y CSS, sin framework, sin lógica JS</span>
+    </span>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harmattan — The wind that shapes a season</title>
+<meta name="description" content="An educational micro-site about the Harmattan: the dry, dusty seasonal wind that shapes life across West Africa every year.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="haze" aria-hidden="true"></div>
+
+  <div class="controls visually-hidden-group">
+    <input type="radio" name="lang" id="lang-en" checked>
+    <input type="radio" name="lang" id="lang-fr">
+    <input type="radio" name="lang" id="lang-es">
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="brand">
+        <span class="brand__mark">◐</span>
+        <span class="brand__name">Harmattan</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html" aria-current="page"><span lang="en">Home</span><span lang="fr">Accueil</span><span lang="es">Inicio</span></a>
+        <a href="formation.html"><span lang="en">Formation</span><span lang="fr">Formation</span><span lang="es">Formación</span></a>
+        <a href="impact.html"><span lang="en">Impact</span><span lang="fr">Impact</span><span lang="es">Impacto</span></a>
+        <a href="regions.html"><span lang="en">Regions</span><span lang="fr">Régions</span><span lang="es">Regiones</span></a>
+        <a href="pricing.html"><span lang="en">UI Patterns</span><span lang="fr">Motifs UI</span><span lang="es">Patrones UI</span></a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <label for="lang-en" class="lang-switch__label">EN</label>
+        <label for="lang-fr" class="lang-switch__label">FR</label>
+        <label for="lang-es" class="lang-switch__label">ES</label>
+      </div>
+      <label class="switch switch--theme" aria-label="Toggle light and dark theme">
+        <input type="checkbox" id="theme-switch">
+        <span class="switch__track switch__track--theme"><span class="switch__thumb"></span></span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">
+        <span lang="en">West African climate · a small study</span>
+        <span lang="fr">Climat ouest-africain · une petite étude</span>
+        <span lang="es">Clima de África Occidental · un pequeño estudio</span>
+      </p>
+      <h1>
+        <span lang="en">The wind that<br>shapes a season.</span>
+        <span lang="fr">Le vent qui<br>façonne une saison.</span>
+        <span lang="es">El viento que<br>moldea una estación.</span>
+      </h1>
+      <p class="page-hero__sub">
+        <span lang="en">Every year, from around late November to March, a dry wind rolls out of the Sahara and reshapes daily life across West Africa — cooling nights, hazing skies, and grounding flights. This is the Harmattan: what it is, how it forms, and why it matters.</span>
+        <span lang="fr">Chaque année, de fin novembre à mars environ, un vent sec souffle depuis le Sahara et transforme le quotidien en Afrique de l'Ouest — nuits plus fraîches, ciels brumeux et vols cloués au sol. Voici l'Harmattan : ce qu'il est, comment il se forme, et pourquoi il compte.</span>
+        <span lang="es">Cada año, desde finales de noviembre hasta marzo aproximadamente, un viento seco sopla desde el Sahara y transforma la vida cotidiana en África Occidental: noches más frías, cielos brumosos y vuelos en tierra. Este es el Harmattan: qué es, cómo se forma y por qué importa.</span>
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>
+        <span lang="en">Quick facts</span>
+        <span lang="fr">En bref</span>
+        <span lang="es">Datos rápidos</span>
+      </h2>
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <caption>
+            <span lang="en">At a glance</span>
+            <span lang="fr">En un coup d'œil</span>
+            <span lang="es">De un vistazo</span>
+          </caption>
+          <tbody>
+            <tr>
+              <th scope="row"><span lang="en">Name origin</span><span lang="fr">Origine du nom</span><span lang="es">Origen del nombre</span></th>
+              <td>
+                <span lang="en">From <em>haramata</em>, a word in Fanti, a language spoken in Ghana.</span>
+                <span lang="fr">Du mot <em>haramata</em>, un terme fanti, une langue parlée au Ghana.</span>
+                <span lang="es">De la palabra <em>haramata</em>, un término fanti, una lengua hablada en Ghana.</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><span lang="en">Season</span><span lang="fr">Saison</span><span lang="es">Temporada</span></th>
+              <td>
+                <span lang="en">Roughly late November through March, generally strongest from December to February.</span>
+                <span lang="fr">Environ de fin novembre à mars, généralement le plus intense de décembre à février.</span>
+                <span lang="es">Aproximadamente desde finales de noviembre hasta marzo, generalmente más intenso entre diciembre y febrero.</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><span lang="en">Wind path</span><span lang="fr">Trajectoire du vent</span><span lang="es">Trayectoria del viento</span></th>
+              <td>
+                <span lang="en">Northeast to southwest — from the Sahara Desert toward the Gulf of Guinea coast.</span>
+                <span lang="fr">Du nord-est vers le sud-ouest — du désert du Sahara vers la côte du golfe de Guinée.</span>
+                <span lang="es">De noreste a suroeste, desde el desierto del Sahara hacia la costa del golfo de Guinea.</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><span lang="en">What drives it</span><span lang="fr">Ce qui le déclenche</span><span lang="es">Qué lo provoca</span></th>
+              <td>
+                <span lang="en">A high-pressure system over the Sahara pushes dry air toward lower pressure near the equator.</span>
+                <span lang="fr">Un système de haute pression au-dessus du Sahara pousse l'air sec vers une basse pression près de l'équateur.</span>
+                <span lang="es">Un sistema de alta presión sobre el Sahara empuja aire seco hacia una zona de baja presión cerca del ecuador.</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><span lang="en">Signature effect</span><span lang="fr">Effet caractéristique</span><span lang="es">Efecto distintivo</span></th>
+              <td>
+                <span lang="en">A dust haze that can reduce visibility to a few hundred meters, similar to heavy fog.</span>
+                <span lang="fr">Une brume de poussière qui peut réduire la visibilité à quelques centaines de mètres, comme un épais brouillard.</span>
+                <span lang="es">Una neblina de polvo que puede reducir la visibilidad a unos pocos cientos de metros, similar a una niebla espesa.</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><span lang="en">Who it reaches</span><span lang="fr">Qui il touche</span><span lang="es">A quién alcanza</span></th>
+              <td>
+                <span lang="en">An estimated 400 million people live within its seasonal range across West Africa.</span>
+                <span lang="fr">Environ 400 millions de personnes vivent dans sa zone d'influence saisonnière en Afrique de l'Ouest.</span>
+                <span lang="es">Se estima que 400 millones de personas viven dentro de su alcance estacional en África Occidental.</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><span lang="en">How far it travels</span><span lang="fr">Jusqu'où il voyage</span><span lang="es">Hasta dónde viaja</span></th>
+              <td>
+                <span lang="en">Dust it carries can extend hundreds of miles out over the Atlantic Ocean.</span>
+                <span lang="fr">La poussière qu'il transporte peut s'étendre sur des centaines de kilomètres au-dessus de l'océan Atlantique.</span>
+                <span lang="es">El polvo que transporta puede extenderse cientos de kilómetros sobre el océano Atlántico.</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>
+        <span lang="en">Why it's more than weather</span>
+        <span lang="fr">Plus qu'une simple météo</span>
+        <span lang="es">Más que un simple clima</span>
+      </h2>
+      <p>
+        <span lang="en">For the countries in its path, the Harmattan isn't a passing storm — it's a distinct season that shapes health, travel, farming, and daily routines for several months at a stretch. Airports adjust operating minimums around it. Farmers time harvests to it. Public health agencies track it, because its dry, dusty air is linked to the seasonal rise of meningitis across the Sahel.</span>
+        <span lang="fr">Pour les pays sur son passage, l'Harmattan n'est pas une tempête passagère — c'est une saison à part entière qui façonne la santé, les déplacements, l'agriculture et le quotidien pendant plusieurs mois. Les aéroports ajustent leurs seuils opérationnels en fonction de lui. Les agriculteurs calent leurs récoltes dessus. Les agences de santé publique le surveillent, car son air sec et poussiéreux est lié à la hausse saisonnière de la méningite dans le Sahel.</span>
+        <span lang="es">Para los países en su trayectoria, el Harmattan no es una tormenta pasajera: es una temporada propia que moldea la salud, los viajes, la agricultura y la vida diaria durante varios meses. Los aeropuertos ajustan sus mínimos operativos en función de él. Los agricultores programan sus cosechas según él. Las agencias de salud pública lo monitorean, porque su aire seco y polvoriento está vinculado al aumento estacional de la meningitis en el Sahel.</span>
+      </p>
+      <p>
+        <span lang="en">It's also a genuinely interesting piece of atmospheric science: a clean, visible example of how a desert's pressure system can reach out and touch the climate, economy, and health of an entire region hundreds of kilometers away.</span>
+        <span lang="fr">C'est aussi un phénomène scientifique fascinant : un exemple clair et visible de la façon dont un système de pression désertique peut influencer le climat, l'économie et la santé de toute une région, à des centaines de kilomètres de distance.</span>
+        <span lang="es">También es un fenómeno científico genuinamente interesante: un ejemplo claro y visible de cómo el sistema de presión de un desierto puede influir en el clima, la economía y la salud de toda una región, a cientos de kilómetros de distancia.</span>
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>
+        <span lang="en">Explore this site</span>
+        <span lang="fr">Explorer ce site</span>
+        <span lang="es">Explorar este sitio</span>
+      </h2>
+      <div class="page-grid">
+        <a href="formation.html" class="page-card">
+          <p class="page-card__index">
+            <span lang="en">01 — Formation</span><span lang="fr">01 — Formation</span><span lang="es">01 — Formación</span>
+          </p>
+          <h3><span lang="en">How it forms</span><span lang="fr">Comment il se forme</span><span lang="es">Cómo se forma</span></h3>
+          <p>
+            <span lang="en">The pressure systems and seasonal shifts that switch the Harmattan on every winter.</span>
+            <span lang="fr">Les systèmes de pression et les changements saisonniers qui déclenchent l'Harmattan chaque hiver.</span>
+            <span lang="es">Los sistemas de presión y los cambios estacionales que activan el Harmattan cada invierno.</span>
+          </p>
+        </a>
+        <a href="impact.html" class="page-card">
+          <p class="page-card__index">
+            <span lang="en">02 — Impact</span><span lang="fr">02 — Impact</span><span lang="es">02 — Impacto</span>
+          </p>
+          <h3><span lang="en">What it affects</span><span lang="fr">Ce qu'il affecte</span><span lang="es">Qué afecta</span></h3>
+          <p>
+            <span lang="en">Health, aviation, agriculture, and the environment — how one wind touches so much.</span>
+            <span lang="fr">Santé, aviation, agriculture et environnement — comment un seul vent touche autant de domaines.</span>
+            <span lang="es">Salud, aviación, agricultura y medio ambiente: cómo un solo viento afecta tanto.</span>
+          </p>
+        </a>
+        <a href="regions.html" class="page-card">
+          <p class="page-card__index">
+            <span lang="en">03 — Regions</span><span lang="fr">03 — Régions</span><span lang="es">03 — Regiones</span>
+          </p>
+          <h3><span lang="en">Who it reaches</span><span lang="fr">Qui il touche</span><span lang="es">A quién alcanza</span></h3>
+          <p>
+            <span lang="en">Which countries feel it most, for how long, and where it overlaps with public health risk.</span>
+            <span lang="fr">Quels pays le ressentent le plus, pendant combien de temps, et où il recoupe les risques de santé publique.</span>
+            <span lang="es">Qué países lo sienten más, durante cuánto tiempo, y dónde se superpone con el riesgo de salud pública.</span>
+          </p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer-unified">
+    <nav class="site-footer-unified__nav" aria-label="Footer">
+      <a href="index.html"><span lang="en">Home</span><span lang="fr">Accueil</span><span lang="es">Inicio</span></a>
+      <a href="formation.html"><span lang="en">Formation</span><span lang="fr">Formation</span><span lang="es">Formación</span></a>
+      <a href="impact.html"><span lang="en">Impact</span><span lang="fr">Impact</span><span lang="es">Impacto</span></a>
+      <a href="regions.html"><span lang="en">Regions</span><span lang="fr">Régions</span><span lang="es">Regiones</span></a>
+      <a href="pricing.html"><span lang="en">UI Patterns</span><span lang="fr">Motifs UI</span><span lang="es">Patrones UI</span></a>
+    </nav>
+    <p>
+      <span lang="en">Harmattan — an educational micro-site by</span>
+      <span lang="fr">Harmattan — un micro-site éducatif par</span>
+      <span lang="es">Harmattan — un micrositio educativo por</span>
+      <a class="brand-link" href="https://koidioble.com">Koidio Y. Blé</a>
+    </p>
+    <p>
+      <span lang="en">Structure: semantic HTML. Layout, theming, and animation: CSS only — no JavaScript.</span>
+      <span lang="fr">Structure : HTML sémantique. Mise en page, thèmes et animation : CSS uniquement — sans JavaScript.</span>
+      <span lang="es">Estructura: HTML semántico. Diseño, temas y animación: solo CSS, sin JavaScript.</span>
+    </p>
+  </footer>
+
+</body>
+</html>
