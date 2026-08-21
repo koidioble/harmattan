@@ -5,7 +5,7 @@ that shapes life across West Africa every year. Built to demonstrate
 **semantic HTML structure and advanced CSS engineering — with zero
 JavaScript anywhere in the project.**
 
-**[Live site →](#)** *(replace with your deployed link)*
+**[Live site →](#)** *https://koidioble.github.io/harmattan/*
 
 ## Why this project exists
 
@@ -114,7 +114,7 @@ JavaScript-free approach runs out of road — and being upfront about it
 ## Run it locally
 
 ```bash
-git clone https://github.com/<your-username>/harmattan.git
+git clone https://github.com/koidioble/harmattan.git
 cd harmattan
 open index.html   # or double-click the file
 ```
