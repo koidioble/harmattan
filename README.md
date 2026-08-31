@@ -145,4 +145,4 @@ from and cross-checked against:
 
 ---
 
-Built by [Koidio Y. Blé](https://koidioble.com) — Computer & Full-Stack Engineer
+Built by [Koidio Y. Blé](https://koidioble.com) —  Software Engineer | Flutter, Firebase, Mobile, Web & Cloud Applications
